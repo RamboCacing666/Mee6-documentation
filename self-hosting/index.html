@@ -8,7 +8,7 @@
   
   <meta name="author" content="Sil Boydens">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Custom Commands - Mee6 Documentation</title>
+  <title>Self hosting - Mee6 Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -19,9 +19,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Custom Commands";
-    var mkdocs_page_input_path = "Commands.md";
-    var mkdocs_page_url = "/Commands/";
+    var mkdocs_page_name = "Self hosting";
+    var mkdocs_page_input_path = "self-hosting.md";
+    var mkdocs_page_url = "/self-hosting/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -54,21 +54,9 @@
     <a class="" href="..">Home</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Custom Commands</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#commands-plugin">Commands Plugin</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#mee6-custom-commands-plugin">Mee6 Custom Commands Plugin</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../Commands/">Custom Commands</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -96,6 +84,27 @@
     <a class="" href="../Music/">Music plugin</a>
 	    </li>
           
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Self hosting</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#self-hosting-of-mee6-the-bot-dev-version">Self hosting of Mee6 the bot (dev version)</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#host-pc">Host pc</a></li>
+        
+            <li><a class="toctree-l3" href="#preperation">preperation</a></li>
+        
+            <li><a class="toctree-l3" href="#running-the-bot">running the bot</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -118,7 +127,7 @@
     
       
     
-    <li>Custom Commands</li>
+    <li>Self hosting</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/mee6/Mee6-documentation/"> Edit on Mee6-documentation</a>
@@ -130,31 +139,67 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="commands-plugin">Commands Plugin</h1>
-<h2 id="mee6-custom-commands-plugin">Mee6 Custom Commands Plugin</h2>
-<h3 id="add-or-manage-your-awesome-custom-commands">Add or Manage Your <strong>AWESOME</strong> Custom Commands!</h3>
-<p>The Custom Commands Plugin allow you to type a simple command and give a large explanation or a link without needing to copy/paste or type a bulk response each time.  </p>
-<p><img alt="add_commands" src="../pics/commands.png" /></p>
-<h3 id="to-add-a-custom-command-follow-these-steps">To Add a Custom Command Follow These Steps:</h3>
-<p><strong>1</strong>) Write the name you wish the command to have.<br />
-In the command name, you can only have: <code>letters, numbers, - or _</code><br />
-Also, you do not need to write <code>!</code> at the start, it's added automatically.  </p>
-<p><strong>2</strong>) Write the return text you wish for the bot to say.<br />
-At the current time, the bot cannot do special function; Only return messages.<br />
-However these messages can have variables, for more about this, read the variables page.</p>
-<p><strong>3</strong>) Now you press the <code>Add</code> button to save your command and add it to your Discord Server.<br />
-To use the command in chat, simple type <code>!command_name</code> and the bot will send the response.  </p>
-<h3 id="to-edit-custom-commands">To Edit Custom Commands</h3>
-<p><img alt="edit_commands" src="../pics/commands_edit.png" /></p>
-<p>If you wish to modify an existing command.<br />
-<strong>1</strong>) Edit your return response. (You currently cannot change command name.)<br />
-<strong>2</strong>) Press <code>Edit</code> Button to save changes to command.  </p>
-<p>If you wish to remove an existing command.<br />
-<strong>3</strong>) Press the <code>Delete</code> button to delete (remove) an existing command.</p>
-<h3 id="variables-in-the-responds">variables in the responds</h3>
-<p>You can use the variables from the <a href="../variables">variables</a> page.</p>
-<p>This can be used to mention the user who did the command or to get information on <strong>yourself</strong>.
-It is not possible to do <code>!info @name</code> to get info of a other user.</p>
+                <h1 id="self-hosting-of-mee6-the-bot-dev-version">Self hosting of Mee6 the bot (dev version)</h1>
+<h2 id="host-pc">Host pc</h2>
+<p>Hosting Mee6 on a Windows maching is not easy,
+ so i suggest using a linux machine.<br />
+For this tutorial i made use of a ubuntu VM in Virtualbox  </p>
+<h2 id="preperation">preperation</h2>
+<h3 id="database">database</h3>
+<p>Be sure your linux machine is up to date.<br />
+Download and unpack <a href="http://redis.io">redis db</a>.<br />
+Type <code>make</code> in the redis directory.<br />
+now you should have a workin redis server, start it with:<br />
+<code>./src/redis-server ./redis.conf</code><br />
+Use Ctrl + C to quit the redis server.  </p>
+<h3 id="site">site</h3>
+<p>Clone the <a href="https://github.com/cookkkie/mee6">git repo</a><br />
+<code>git clone https://github.com/cookkkie/mee6 &amp;&amp; cd mee6</code><br />
+Create a application on <a href="https://discordapp.com/developers/applications/me">Discord</a><br />
+Add these 2 redirect uri's:<br />
+<code>http://localhost:5000/confirm_login</code><br />
+<code>http://localhost:5000/servers</code><br />
+Run the following commands (use <code>pip3</code> if <code>pip</code> is bound to your python2 instance)<br />
+<code>cd website &amp;&amp; pip3 install -r requirements.txt</code>  </p>
+<h3 id="bot">bot</h3>
+<p>Run the following commands (use <code>pip3</code> if <code>pip</code> is bound to your python2 instance)<br />
+<code>cd chat-bot &amp;&amp; pip install -r requirements.txt</code><br />
+<code>python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]</code><br />
+Create a bot user in your app.  </p>
+<h3 id="variables">variables</h3>
+<p>Add this to your <code>.bashrc</code> file (on the bottem)<br />
+(this file can be found in the user directory)</p>
+<pre><code class="bash">
+export REDIS_URL=redis://localhost  <br />
+export OAUTH2_CLIENT_ID=123  <br />
+export OAUTH2_CLIENT_SECRET=123  <br />
+export MEE6_TOKEN=123  <br />
+export OAUTH2_REDIRECT_URI=http://localhost:5000/confirm_login  <br />
+export MAL_USERNAME=123  <br />
+export MAL_PASSWORD=123  <br />
+export TWITCH_CLIENT_ID=123  <br />
+export GOOGLE_API_KEY=123  <br />
+# Flask secret key  <br />
+export SECRET_KEY=1234  <br />
+</code></pre>
+
+<p>Fill in the needed values.<br />
+Leave the first one.<br />
+For the next 4 you need to get them from your <a href="https://discordapp.com/developers/applications/me">Discord app</a><br />
+The flask secret key is just a random value (change it!!! security!!)<br />
+For the others... idk, i make them empty.  </p>
+<h2 id="running-the-bot">running the bot</h2>
+<p>First RESTART YOUR SHELL.<br />
+start your redis server as mentioned in the redis install part
+Run the website: <code>cd mee6/website &amp;&amp; python3 app.py</code>
+Run the bot <code>cd mee6/chat-bot &amp;&amp; python3 bot.py</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>the paypalrestsdk does not seems to install always, you might want to put line 10
+in mee6/website/app.py in commentary (put in # in front)</p>
+</div>
+<p>you can now go to your <a href="http://localhost:5000">personal dashboard</a>
+(on the pc you are hosting the bot on)</p>
               
             </div>
           </div>
@@ -162,10 +207,8 @@ It is not possible to do <code>!info @name</code> to get info of a other user.</
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Variables/" class="btn btn-neutral float-right" title="Variables">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Music/" class="btn btn-neutral" title="Music plugin"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -191,10 +234,8 @@ It is not possible to do <code>!info @name</code> to get info of a other user.</
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Music/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../Variables/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
