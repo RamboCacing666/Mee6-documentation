@@ -1,73 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
     <url>
-     <loc>https://mee6.github.io/Mee6-documentation/</loc>
-     <lastmod>2019-02-04</lastmod>
+     <loc>http://mee6.github.io/Mee6-documentation/</loc>
+     <lastmod>2017-05-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
     <url>
-     <loc>https://mee6.github.io/Mee6-documentation/commands/</loc>
-     <lastmod>2019-02-04</lastmod>
+     <loc>http://mee6.github.io/Mee6-documentation/Commands/</loc>
+     <lastmod>2017-05-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
     <url>
-     <loc>https://mee6.github.io/Mee6-documentation/commands_variables/</loc>
-     <lastmod>2019-02-04</lastmod>
+     <loc>http://mee6.github.io/Mee6-documentation/Variables/</loc>
+     <lastmod>2017-05-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
     <url>
-     <loc>https://mee6.github.io/Mee6-documentation/timers/</loc>
-     <lastmod>2019-02-04</lastmod>
+     <loc>http://mee6.github.io/Mee6-documentation/Levels/</loc>
+     <lastmod>2017-05-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
     <url>
-     <loc>https://mee6.github.io/Mee6-documentation/levels/</loc>
-     <lastmod>2019-02-04</lastmod>
+     <loc>http://mee6.github.io/Mee6-documentation/levelxp/</loc>
+     <lastmod>2017-05-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
     <url>
-     <loc>https://mee6.github.io/Mee6-documentation/levels_xp/</loc>
-     <lastmod>2019-02-04</lastmod>
+     <loc>http://mee6.github.io/Mee6-documentation/Moderator/</loc>
+     <lastmod>2017-05-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
     <url>
-     <loc>https://mee6.github.io/Mee6-documentation/moderator/</loc>
-     <lastmod>2019-02-04</lastmod>
+     <loc>http://mee6.github.io/Mee6-documentation/Music/</loc>
+     <lastmod>2017-05-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    <url>
-     <loc>https://mee6.github.io/Mee6-documentation/music/</loc>
-     <lastmod>2019-02-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://mee6.github.io/Mee6-documentation/record/</loc>
-     <lastmod>2019-02-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://mee6.github.io/Mee6-documentation/search_anything/</loc>
-     <lastmod>2019-02-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://mee6.github.io/Mee6-documentation/help_me/</loc>
-     <lastmod>2019-02-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://mee6.github.io/Mee6-documentation/twitch_n_co/</loc>
-     <lastmod>2019-02-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://mee6.github.io/Mee6-documentation/reddit/</loc>
-     <lastmod>2019-02-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://mee6.github.io/Mee6-documentation/welcome/</loc>
-     <lastmod>2019-02-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
+    
+
 </urlset>
