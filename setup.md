@@ -1,5 +1,5 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+*setup.mdtext=auto
 
 # Custom for Visual Studio
 *.cs   diff=csharp
